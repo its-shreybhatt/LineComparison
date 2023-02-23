@@ -40,11 +40,16 @@ public class LineComparison {
         int y22 = array2[3];
         double length2 = Math.sqrt(Math.pow((x22 - x11), 2) + Math.pow((y22 - y11), 2));
         System.out.println("Length of a 2nd line = " + length2);
+        System.out.println(" *   *  ");
 
-        if (length1 == length2) {
-            System.out.println("Both lines are Equal");
-        } else if (length1 > length2) {
-            System.out.println("First line is Greater");
-        } else System.out.println("Second line is Greater");
+        // Comparision
+        Double obj1 = Double.valueOf(length1);
+        Double obj2 = Double.valueOf(length2);
+        int compare = obj1.compareTo(obj2);
+        if (compare == 0) {
+            System.out.println("both lines are equal");
+        } else if (compare == 1) {
+            System.out.println("1st line is greater");
+        } else System.out.println("2nd line is greater");
     }
 }
